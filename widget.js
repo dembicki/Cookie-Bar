@@ -1,8 +1,11 @@
 class Bar {
-    constructor(message,position){
-        this.message = position;
-        this.position = message;
-        createBar(message,position);
+    constructor(obj){
+        this.obj = {
+            message: 'test',
+            position: 'top'
+        }
+
+        createBar(obj.message, obj.position);
     }
 
 }
@@ -12,15 +15,22 @@ function createBar(message, position){
     x.classList.add('wrapper');
     x.innerHTML = message;
     document.body.appendChild(x);
-    // btn = document.createElement('button');
-    // btn.append(x);
 
     if(position == 'top'){
         x.style.top = '0';
-    }else{
+    }else if (position== 'bottom'){
         x.style.bottom = '0';
+    }
+    else{
+        x.style.display = 'none';
     }
 }
 
-let myBar = new Bar ('test','top');
+let myBar = new Bar ({
+    message:'lorem ipsum',
+    position:'top'
+}
+);
+
+console.log(myBar);
 
