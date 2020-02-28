@@ -7,8 +7,8 @@ Simple vanilaJs bar for your webiste
 
 1.Add script and styles to your project
 
-```<link rel="stylesheet" href="widget.css">
-<script src="widget.js"></script>```
+```<link rel="stylesheet" href="widget.css"> ```
+```<script src="widget.js"></script>```
 
 2. Add init and modify message and position
 ```<script>
