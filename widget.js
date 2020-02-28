@@ -13,10 +13,15 @@ class Bar {
 
  function createBar(message, position){
     let x = document.createElement('div');
-    x.classList.add('wrapper');
+    x.classList.add('wrapper','hide');
     x.innerHTML = message;
     document.body.appendChild(x);
-    x.style.display = 'none';
+
+    let getWidget = document.createElement('a');
+    getWidget.innerHTML = 'Get widgets';
+    getWidget.classList.add('getWidget','hide');
+    x.appendChild(getWidget);
+
 
     if(position == 'top'){
         x.style.top = '0';
@@ -30,20 +35,22 @@ function createShowBarButton(){
     showBar.classList.add('showBar');
     showBar.innerHTML = 'Show Bar';
     document.body.appendChild(showBar);
-    let bar = document.querySelector('.wrapper');
-
     showBar.addEventListener('click', () => {
+        let bar = document.querySelector('.wrapper');
+        let getWidget = document.querySelector('.getWidget');
+        getWidget.style.display = 'block';
         bar.style.display = 'block';
+        bar.style.height = '50px';
     })
 }; 
 
 
-
 let myBar = new Bar ({
     message:'Add beautiful widgets to your website',
-    position:'top'
+    position:'bottom'
 }
 );
+
 
 console.log(myBar);
 
