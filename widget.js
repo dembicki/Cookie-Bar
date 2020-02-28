@@ -12,21 +12,21 @@ class Bar {
 }
 
  const createBar = (message, position) => {
-    let x = document.createElement('div');
-    x.classList.add('wrapper','hide');
-    x.innerHTML = message;
-    document.body.appendChild(x);
+    let bar = document.createElement('div');
+    bar.classList.add('wrapper','hide');
+    bar.innerHTML = message;
+    document.body.appendChild(bar);
 
     let getWidget = document.createElement('a');
     getWidget.innerHTML = 'Get widgets';
     getWidget.classList.add('getWidget','hide');
-    x.appendChild(getWidget);
-
+    bar.appendChild(getWidget);
+    getWidget.addEventListener('click', () => alert('hello world'));
 
     if(position == 'top'){
-        x.style.top = '0';
+        bar.style.top = '0';
     }else if (position== 'bottom'){
-        x.style.bottom = '0';
+        bar.style.bottom = '0';
     }
 }
 
@@ -36,9 +36,11 @@ const createShowBarButton = () => {
     showBar.innerHTML = 'Show Bar';
     document.body.appendChild(showBar);
     showBar.addEventListener('click', () => {
+        let close = document.querySelector('.close');
         let bar = document.querySelector('.wrapper');
         let getWidget = document.querySelector('.getWidget');
         getWidget.style.display = 'block';
+        close.style.display = 'block';
         bar.style.display = 'block';
         bar.style.height = '50px';
     })
@@ -47,7 +49,7 @@ const createShowBarButton = () => {
 
 let myBar = new Bar ({
     message:'Add beautiful widgets to your website',
-    position:'top'
+    position:'bottom'
 }
 );
 

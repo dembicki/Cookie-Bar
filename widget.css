@@ -10,7 +10,7 @@
 .wrapper{
     height:50px;
     width:100vw;
-    background-color:#363d4c;
+    background-color:#373d4d;
     color:white;
     position: absolute;
     text-align: center;
@@ -51,6 +51,6 @@
     width:80px;
     line-height: 30px;
     color:white;
-    background-color:orange;
+    background-color: #f6c425;
     cursor:pointer;
 }
