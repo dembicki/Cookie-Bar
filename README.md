@@ -5,9 +5,10 @@ Simple vanilaJs bar for your webiste
 
 #How to use
 
-1.Add script to your project
+1.Add script and styles to your project
 
-```<script src="widget.js"></script>```
+```<link rel="stylesheet" href="widget.css">
+<script src="widget.js"></script>```
 
 2. Add init and modify message and position
 ```<script>
