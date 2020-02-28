@@ -11,7 +11,7 @@ class Bar {
 
 }
 
- function createBar(message, position){
+ const createBar = (message, position) => {
     let x = document.createElement('div');
     x.classList.add('wrapper','hide');
     x.innerHTML = message;
@@ -30,7 +30,7 @@ class Bar {
     }
 }
 
-function createShowBarButton(){
+const createShowBarButton = () => {
     let showBar = document.createElement('a');
     showBar.classList.add('showBar');
     showBar.innerHTML = 'Show Bar';
@@ -47,7 +47,7 @@ function createShowBarButton(){
 
 let myBar = new Bar ({
     message:'Add beautiful widgets to your website',
-    position:'bottom'
+    position:'top'
 }
 );
 
