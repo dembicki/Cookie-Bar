@@ -36,23 +36,11 @@ const createShowBarButton = () => {
     showBar.innerHTML = 'Show Bar';
     document.body.appendChild(showBar);
     showBar.addEventListener('click', () => {
-        let close = document.querySelector('.close');
         let bar = document.querySelector('.wrapper');
         let getWidget = document.querySelector('.getWidget');
         getWidget.style.display = 'block';
-        close.style.display = 'block';
         bar.style.display = 'block';
         bar.style.height = '50px';
     })
 }; 
-
-
-let myBar = new Bar ({
-    message:'Add beautiful widgets to your website',
-    position:'bottom'
-}
-);
-
-
-console.log(myBar);
 
